@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="bg-primary text-white text-center py-4">
+    <div class="container">
+        <img src="24030195t.jpeg" alt="Tanishka" 
+             class="rounded-circle mb-3" width="120" height="120">
+        <h1>My Portfolio</h1>
+        <h4>Tanishka Shailesh Pingale</h4>
+        <p>Computer Engineering Student</p>
+    </div>
+</header>
+
+<!-- ================= MAIN LAYOUT ================= -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- ===== SIDEBAR ===== -->
+        <nav class="col-md-2 bg-dark text-white p-4 min-vh-100">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- ===== CENTER CONTENT ===== -->
+        <main class="col-md-7 p-4">
+
+            <section id="home" class="mb-5">
+                <h2>Welcome</h2>
+                <p>
+                    Welcome to my portfolio. I am a passionate Computer Engineering 
+                    student focused on building strong technical skills and gaining 
+                    real-world experience through projects and internships.
+                </p>
+            </section>
+
+            <section id="about" class="mb-5">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I am <b>Tanishka Pingale</b>, a dedicated and enthusiastic 
+                    Computer Engineering student with a strong interest in Web Development 
+                    and Cybersecurity.
+                </p>
+                <p>
+                    My career goal is to become a skilled software professional where I can 
+                    apply my technical knowledge and gain real-world experience.
+                </p>
+                <p>
+                    Currently, I am pursuing my B.Tech in Computer Technology and improving 
+                    my skills in HTML, Java, SQL, and cybersecurity concepts.
+                </p>
+            </section>
+
+            <section id="projects" class="mb-5">
+                <h2>Projects</h2>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5>1. Student Management System (HTML)</h5>
+                        <p>
+                            Designed and developed a basic Student Management System using HTML.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5>2. Crime Dashboard UI</h5>
+                        <p>
+                            Created a dashboard interface for crime data presentation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5>3. Resin Art Business Website</h5>
+                        <p>
+                            Developed a product showcase website for a resin art brand.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5>4. CTF Participation</h5>
+                        <p>
+                            Participated in cybersecurity challenges involving decoding and analysis.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="mb-5">
+                <h2>Achievements & Skills</h2>
+
+                <h5>Technical Skills</h5>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">HTML – Website Structure & Layout Design</li>
+                    <li class="list-group-item">CSS – Basic Styling & Page Formatting</li>
+                    <li class="list-group-item">Java – Basic Programming & OOP Concepts</li>
+                    <li class="list-group-item">SQL – Database Queries & Table Management</li>
+                </ul>
+
+                <h5>Soft Skills</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Communication Skills</li>
+                    <li class="list-group-item">Teamwork & Collaboration</li>
+                    <li class="list-group-item">Problem-Solving Ability</li>
+                    <li class="list-group-item">Time Management</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- ===== RIGHT ASIDE ===== -->
+        <aside class="col-md-3 bg-light p-4">
+            <h4>Quick Info</h4>
+            <p>📍 Mumbai, India</p>
+            <p>
+                🎓 B.Tech Computer Engineering (2nd Year)<br>
+                Vivekanand Education Society's Institute of Technology (VESIT)
+            </p>
+            <p>💡 Interested in Web Development & Cybersecurity</p>
+
+            <hr>
+
+            <h5>Career Objective</h5>
+            <p>
+                To build a strong foundation in software development and cybersecurity,
+                gain practical experience through internships.
+            </p>
+
+            <hr>
+
+            <h5>Internship Status</h5>
+            <p>
+                Actively seeking internship opportunities.
+            </p>
+
+            <hr>
+
+            <h5>Personal Quote</h5>
+            <p>
+                "Continuous learning and consistency lead to success."
+            </p>
+        </aside>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white p-4 mt-4" id="contact">
+    <div class="container">
+
+        <h4 class="text-center mb-3">Contact Me</h4>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr class="bg-white">
+
+        <p class="text-center mb-0">
+            © 2026 Tanishka Pingale | Built with Bootstrap
+        </p>
+
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
