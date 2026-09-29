@@ -2,188 +2,363 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Semantic Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishka Pingale | Portfolio</title>
+    <meta name="description" content="Portfolio of Tanishka Shailesh Pingale, B.Tech Computer Technology student at VESIT and Trainee Developer, focused on software and backend development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="is-loading">
 
-<header class="main-header">
-    <div class="header-content">
-        <img src="24030195t.jpeg" alt="Tanishka" class="header-photo">
+<!-- ===== PRELOADER ===== -->
+<div id="loader">
+    <div class="loader-logo">TP</div>
+    <div class="loader-bar"><span></span></div>
+    <p class="loader-text mono">initializing portfolio<span class="dots"></span></p>
+</div>
 
-        <div class="header-text">
-            <h1>My Portfolio</h1>
-            <h2>Tanishka Shailesh Pingale</h2>
-            <p>Computer Engineering Student</p>
-        </div>
-    </div>
-</header>
+<!-- ===== BACKGROUND FX ===== -->
+<canvas id="bg-canvas"></canvas>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<div class="grain"></div>
 
-<div class="container">
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="scroll-progress"></div>
 
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <a href="#home" class="nav-logo">TP<span>.</span></a>
     <nav>
-        <ul>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span></button>
+</header>
 
-    <section>
-            <div id="home" class="section-header">
-            <h2>Welcome</h2>
-            <p>
-                Welcome to my portfolio. I am a passionate Computer Engineering 
-                student focused on building strong technical skills and gaining 
-                real-world experience through projects and internships.
+<main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="hero-hello mono reveal">&lt;hello world /&gt;</p>
+            <h1 class="hero-name">
+                <span class="split">Tanishka</span>
+                <span class="split gradient-text">Pingale</span>
+            </h1>
+            <p class="hero-role reveal" data-delay="600">
+                I'm a <span class="typed mono"></span><span class="caret">|</span>
             </p>
+            <p class="hero-desc reveal" data-delay="750">
+                Motivated Computer Technology student at VESIT with hands-on experience
+                in software development. I enjoy building practical technology solutions,
+                from mobile apps to backend and database systems.
+            </p>
+            <div class="hero-cta reveal" data-delay="900">
+                <a href="#projects" class="btn btn-primary magnetic"><span>View Projects</span></a>
+                <a href="#contact" class="btn btn-ghost magnetic"><span>Get in Touch</span></a>
+            </div>
         </div>
-                
-     <div id="about" class="section-header">
-            <h2>About Me</h2>
-    <p>
-        Hello! I am <b>Tanishka Pingale</b>, a dedicated and enthusiastic 
-        Computer Engineering student with a strong interest in Web Development 
-        and Cybersecurity. I enjoy learning new technologies and building simple, 
-        clean, and user-friendly web applications.
-    </p>
 
-    <p>
-        My career goal is to become a skilled software professional where I can 
-        apply my technical knowledge, improve my problem-solving skills, and gain 
-        real-world experience through innovative projects and internships.
-    </p>
+        <div class="hero-visual reveal" data-delay="400">
+            <div class="photo-wrap tilt">
+                <div class="photo-ring"></div>
+                <img src="profile.jpeg" alt="Tanishka Pingale" class="photo"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <div class="photo-fallback">TP</div>
+            </div>
+            <div class="float-badge badge-1">💼 Trainee Developer</div>
+            <div class="float-badge badge-2">🎓 CGPA 9.09</div>
+            <div class="float-badge badge-3">🏆 Hackathon Top 2</div>
+        </div>
 
-    <p>
-        Currently, I am pursuing my B.Tech in Computer Technology and actively 
-        working on improving my skills in HTML, Java, SQL, and basic cybersecurity concepts.
-    </p>
-</div>
-
-        
-
-        <article id="projects">
-           
-    <h2>Projects</h2>
-
-    <h3>1. Student Management System (HTML)</h3>
-    <p>
-        Designed and developed a basic Student Management System using HTML.
-        The project includes student registration forms, login page, table display,
-        and structured layout using semantic HTML tags.
-    </p>
-
-    <h3>2. Crime Dashboard UI</h3>
-    <p>
-        Created a dashboard interface for a Crime & Punishment system.
-        The project focused on layout structuring, data presentation, and
-        user-friendly interface design.
-    </p>
-
-    <h3>3. Resin Art Business Website</h3>
-    <p>
-        Developed a simple website for a resin art brand showcasing products,
-        contact details, and brand information. The goal was to create a clean
-        and attractive layout for customer engagement.
-    </p>
-
-    <h3>4. CTF Participation</h3>
-    <p>
-        Participated in Capture The Flag (CTF) competitions involving basic
-        cybersecurity challenges such as decoding, password cracking, and
-        packet analysis. This improved my analytical and problem-solving skills.
-    </p>
-
-</article>
-
-        
-
-        <footer class="section-footer" id="skills">
-         <h2>Achievements & Skills</h2>
-
-    <h3>Technical Skills</h3>
-    <ul>
-        <li>HTML – Website Structure & Layout Design</li>
-        <li>CSS – Basic Styling & Page Formatting</li>
-        <li>Java – Basic Programming & OOP Concepts</li>
-        <li>SQL – Database Queries & Table Management</li>
-    </ul>
-
-    <h3>Soft Skills</h3>
-    <ul>
-        <li>Communication Skills</li>
-        <li>Teamwork & Collaboration</li>
-        <li>Problem-Solving Ability</li>
-        <li>Time Management</li>
-    </ul>
-        </footer>
+        <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <aside>
-    <h2>Quick Info</h2>
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee">
+        <div class="marquee-track mono">
+            <span>JAVA</span><span>✦</span><span>PYTHON</span><span>✦</span><span>REACT</span><span>✦</span>
+            <span>POSTGRESQL</span><span>✦</span><span>MYSQL</span><span>✦</span><span>MONGODB</span><span>✦</span>
+            <span>PHP</span><span>✦</span><span>C++</span><span>✦</span><span>LINUX</span><span>✦</span>
+            <span>JAVA</span><span>✦</span><span>PYTHON</span><span>✦</span><span>REACT</span><span>✦</span>
+            <span>POSTGRESQL</span><span>✦</span><span>MYSQL</span><span>✦</span><span>MONGODB</span><span>✦</span>
+            <span>PHP</span><span>✦</span><span>C++</span><span>✦</span><span>LINUX</span><span>✦</span>
+        </div>
+    </div>
 
-    <p>📍 Mumbai, India</p>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+        <h2 class="section-title reveal"><span class="mono num">01.</span> <span class="scramble">About Me</span></h2>
 
-    <p>🎓 B.Tech Computer Engineering (2nd Year)<br>
-       Vivekanand Education Society's Institute of Technology (VESIT)
-    </p>
+        <div class="about-grid">
+            <div class="about-text glass reveal">
+                <p>
+                    Hello! I am <b>Tanishka Shailesh Pingale</b>, a second-year B.Tech
+                    Computer Technology student at VES Institute of Technology (VESIT)
+                    with a strong academic record.
+                </p>
+                <p>
+                    I'm skilled in <span class="hl">Java</span>, <span class="hl">Python</span>,
+                    <span class="hl">SQL</span>, <span class="hl">React</span> and database
+                    technologies, with practical exposure through a Trainee Developer internship
+                    at Adhyay Infotech Pvt. Ltd.
+                </p>
+                <p>
+                    I'm interested in software development, backend development, data analytics,
+                    and building practical technology solutions. Off the keyboard, I'm a
+                    state-level badminton player 🏸.
+                </p>
+                <p class="about-meta mono">📍 Navi Mumbai, Maharashtra</p>
+            </div>
 
-    <p>💡 Interested in Web Development & Cybersecurity</p>
+            <div class="stats">
+                <div class="stat glass reveal" data-delay="100">
+                    <span class="stat-num" data-count="9.09" data-decimals="2">0</span>
+                    <p>B.Tech CGPA</p>
+                </div>
+                <div class="stat glass reveal" data-delay="200">
+                    <span class="stat-num" data-count="93.6" data-decimals="1">0</span><span class="stat-plus">%</span>
+                    <p>Diploma Score</p>
+                </div>
+                <div class="stat glass reveal" data-delay="300">
+                    <span class="stat-plus">#</span><span class="stat-num" data-count="2">0</span>
+                    <p>Hackathon Rank</p>
+                </div>
+                <div class="stat glass reveal status-card" data-delay="400">
+                    <span class="pulse"></span>
+                    <p><b>Currently: Trainee Developer</b><br>Building DailyTx at Adhyay Infotech Pvt. Ltd.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <hr>
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section">
+        <h2 class="section-title reveal"><span class="mono num">02.</span> <span class="scramble">Experience</span></h2>
 
-    <h3>Career Objective</h3>
-    <p>
-        To build a strong foundation in software development and cybersecurity,
-        gain practical experience through internships, and grow into a skilled
-        IT professional.
-    </p>
+        <div class="exp-card glass tilt reveal">
+            <div class="exp-head">
+                <div>
+                    <h3>Trainee Developer</h3>
+                    <p class="exp-company">Adhyay Infotech Pvt. Ltd.</p>
+                </div>
+                <span class="exp-date mono">27 May 2026 – 30 Sep 2026</span>
+            </div>
+            <ul class="exp-list">
+                <li>Practical exposure to software development workflows and application development.</li>
+                <li>Hands-on experience with development tools, databases, and modern web technologies.</li>
+                <li>Working on <b>DailyTx</b>, a daily delivery platform built with React Native, Python and PostgreSQL.</li>
+            </ul>
+            <div class="tags mono"><span>React Native</span><span>Python</span><span>PostgreSQL</span></div>
+        </div>
+    </section>
 
-    <hr>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+        <h2 class="section-title reveal"><span class="mono num">03.</span> <span class="scramble">Skills</span></h2>
 
-    <h3>Internship Status</h3>
-    <p>
-        Actively seeking internship opportunities to enhance practical skills
-        and gain industry exposure.
-    </p>
+        <div class="skills-grid">
+            <div class="skill-card glass tilt reveal" data-delay="0">
+                <div class="skill-icon">&lt;/&gt;</div>
+                <h3>Languages</h3>
+                <div class="skill-chips mono"><span>Java</span><span>Python</span><span>C</span><span>C++</span><span>PHP</span><span>SQL</span></div>
+            </div>
+            <div class="skill-card glass tilt reveal" data-delay="100">
+                <div class="skill-icon">{ }</div>
+                <h3>Web</h3>
+                <div class="skill-chips mono"><span>HTML</span><span>CSS</span><span>React</span><span>React Native</span></div>
+            </div>
+            <div class="skill-card glass tilt reveal" data-delay="200">
+                <div class="skill-icon">⛁</div>
+                <h3>Databases</h3>
+                <div class="skill-chips mono"><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>DBMS</span></div>
+            </div>
+            <div class="skill-card glass tilt reveal" data-delay="300">
+                <div class="skill-icon">∑</div>
+                <h3>Data &amp; Tools</h3>
+                <div class="skill-chips mono"><span>Pandas</span><span>NumPy</span><span>VS Code</span><span>XAMPP</span><span>GitHub</span><span>Linux</span></div>
+            </div>
+        </div>
 
-    <hr>
+        <h3 class="sub-title reveal">Strengths</h3>
+        <div class="chips reveal">
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Leadership</span>
+            <span class="chip">Discipline</span>
+            <span class="chip">Time Management</span>
+        </div>
+    </section>
 
-    <h3>Personal Quote</h3>
-    <p>
-        "Continuous learning and consistency lead to success."
-    </p>
-</aside>
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+        <h2 class="section-title reveal"><span class="mono num">04.</span> <span class="scramble">Projects</span></h2>
 
+        <div class="projects-grid">
+            <article class="project-card tilt reveal" data-delay="0">
+                <span class="project-num mono">01</span>
+                <span class="project-label mono">Internship Project</span>
+                <h3>DailyTx – Daily Delivery Platform</h3>
+                <p>
+                    Delivery management app built at Adhyay Infotech. Contributed to route-wise
+                    delivery management, customer &amp; subscription management, inventory tracking,
+                    invoicing, ledger/bookkeeping, and returnable tracking, plus app screens,
+                    navigation, UI improvements and backend/database integration.
+                </p>
+                <div class="tags mono"><span>React Native</span><span>Python</span><span>PostgreSQL</span></div>
+            </article>
 
-</div>
+            <article class="project-card tilt reveal" data-delay="100">
+                <span class="project-num mono">02</span>
+                <span class="project-label mono">🏆 Top 2 Runner-Up</span>
+                <h3>Crowd Prediction AI System</h3>
+                <p>
+                    AI-based crowd prediction solution built in 24 hours at Hack for Innovation 2026,
+                    VESIT. Designed and presented an innovative predictive system as a team under
+                    strict deadlines, finishing as Top 2 Runner-Up.
+                </p>
+                <div class="tags mono"><span>AI</span><span>Prediction</span><span>Hackathon</span></div>
+            </article>
 
-<footer class="main-footer" id="contact">
-    <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-</form>
+            <article class="project-card tilt reveal" data-delay="200">
+                <span class="project-num mono">03</span>
+                <span class="project-label mono">Web App</span>
+                <h3>CEE – Exam Monitoring System</h3>
+                <p>
+                    Web-based examination monitoring system to manage and track examination
+                    activities. Implemented the backend logic and user interface for efficient
+                    exam monitoring with database integration.
+                </p>
+                <div class="tags mono"><span>PHP</span><span>HTML</span><span>CSS</span><span>MySQL</span></div>
+            </article>
 
+            <article class="project-card tilt reveal" data-delay="300">
+                <span class="project-num mono">04</span>
+                <span class="project-label mono">Desktop App</span>
+                <h3>Quick Sort Visualization Simulator</h3>
+                <p>
+                    Graphical tool that displays every step of Quick Sort interactively, with
+                    dynamic user input and real-time visualization, deepening understanding of
+                    Data Structures &amp; Algorithms and GUI development.
+                </p>
+                <div class="tags mono"><span>Java</span><span>Java Swing</span><span>DSA</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION & ACHIEVEMENTS ===== -->
+    <section id="education" class="section">
+        <h2 class="section-title reveal"><span class="mono num">05.</span> <span class="scramble">Education</span></h2>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="glass timeline-card">
+                    <div class="timeline-top">
+                        <span class="mono timeline-tag">Second Year · Graduating 2028</span>
+                        <span class="score mono">CGPA 9.09</span>
+                    </div>
+                    <h3>B.Tech – Computer Technology</h3>
+                    <p>VES Institute of Technology (VESIT)</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-delay="150">
+                <div class="timeline-dot"></div>
+                <div class="glass timeline-card">
+                    <div class="timeline-top">
+                        <span class="mono timeline-tag">Diploma</span>
+                        <span class="score mono">93.60%</span>
+                    </div>
+                    <h3>Diploma in Computer Technology</h3>
+                    <p>BVIT</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-delay="300">
+                <div class="timeline-dot"></div>
+                <div class="glass timeline-card">
+                    <div class="timeline-top">
+                        <span class="mono timeline-tag">Completed 2022</span>
+                        <span class="score mono">80.50%</span>
+                    </div>
+                    <h3>Secondary School Certificate (SSC)</h3>
+                    <p>CBSE Board</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="sub-title reveal">Achievements</h3>
+        <div class="achievements">
+            <div class="achievement glass tilt reveal" data-delay="0">
+                <span class="ach-icon">🏆</span>
+                <h4>Top 2 Runner-Up</h4>
+                <p>Hack for Innovation 2026, 24-Hour Hackathon at VESIT</p>
+            </div>
+            <div class="achievement glass tilt reveal" data-delay="100">
+                <span class="ach-icon">🏸</span>
+                <h4>State-Level Player</h4>
+                <p>Badminton</p>
+            </div>
+            <div class="achievement glass tilt reveal" data-delay="200">
+                <span class="ach-icon">🥇</span>
+                <h4>District-Level Winner</h4>
+                <p>Badminton, representing BVIT</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+        <h2 class="section-title reveal"><span class="mono num">06.</span> <span class="scramble">Get in Touch</span></h2>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3 class="big-text">Let's build<br><span class="gradient-text">something cool.</span></h3>
+                <p>Have an opportunity, a project idea, or just want to say hi? My inbox is open.</p>
+                <a class="email-link mono" href="mailto:tanishkashaileshpingale@gmail.com">
+                    tanishkashaileshpingale@gmail.com
+                </a>
+                <div class="socials">
+                    <a href="https://github.com/tanu2515" target="_blank" rel="noopener" class="social magnetic"><span>GitHub ↗</span></a>
+                </div>
+            </div>
+
+            <form class="contact-form glass reveal" data-delay="150">
+                <div class="field">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="field">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="field">
+                    <textarea id="message" rows="4" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary magnetic"><span>Send Message ➜</span></button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
     <p>© 2026 Tanishka Pingale. All Rights Reserved.</p>
-
-    <p>
-        📧 Email: 
-        <a href="mailto:tanishkapingale@gmail.com">
-            tanishkashaileshpingale@gmail.com
-        </a>
-    </p>
-
-   
-    <p>
-        Built with using HTML & CSS
-    </p>
+    <p class="mono">Built with HTML, CSS &amp; JavaScript</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
